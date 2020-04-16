@@ -4,9 +4,17 @@ import ChartType from "./ChartType";
 import "./ChartPane.css";
 
 const ChartPane = (props) => {
-  const { chartConfig } = props;
+  const { chartList } = props;
 
-  return <ChartType chartConfig={chartConfig} />;
+  return (
+    <div className="ChartPane">
+      {chartList.map((chart, index) => (
+        <div key={index} className="ChartPane__item">
+          <ChartType chartConfig={chart} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default ChartPane;

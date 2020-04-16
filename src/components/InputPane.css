@@ -1,24 +1,98 @@
 .InputPane {
+  height: 90vh;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 
   margin: 3rem;
-  border-radius: 12px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 }
 
-.container-left {
-  grid-area: 1 / 1 / 6 / 4;
+.InputPane__data {
+  grid-area: 1 / 1 / 6 / 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
 }
-.container-right {
-  grid-area: 1 / 4 / 6 / 7;
+
+.InputPane__data__fields {
+  margin: 1rem;
+  max-height: 50%;
+  overflow-y: auto;
+}
+
+.InputPane__charts {
+  grid-area: 1 / 3 / 6 / 6;
   padding: 1rem;
+}
+
+.DataInput {
+  width: 100px;
+}
+
+.ColorPicker {
+  width: 36px;
+}
+
+input {
+  width: 175px;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 1px solid hsl(200, 25%, 88%);
+  border-radius: 7px;
+}
+
+select {
+  width: 200px;
+  padding: 0.5rem;
+  border: 1px solid hsl(200, 25%, 88%);
+  border-radius: 7px;
+}
+
+button {
+  width: 200px;
+  height: 2.25rem;
+  cursor: pointer;
+  outline: none;
+  margin: 0.5em;
+  border-radius: 12px;
+}
+
+.AddFieldButton {
+  width: 150px;
+  border: none;
+  background: #28486e;
+  color: #dee6f0;
+}
+
+.RemoveFieldButton {
+  width: 150px;
+  border: none;
+  background: #dee6f0;
+  color: #28486e;
+}
+
+.ClearFieldButton {
+  width: 150px;
+  border: none;
+  background: none;
+  /* border: 1px solid #28486e; */
+  color: #28486e;
+}
+
+.SubmitButton {
+  border: none;
+  font-size: 16px;
+  background: #41bd92;
+  color: #f7fcfa;
+}
+
+.Divider {
+  width: 90%;
+  margin: 2rem 0;
+  border: 0.75px solid hsl(200, 25%, 88%);
+  border-radius: 7px;
 }

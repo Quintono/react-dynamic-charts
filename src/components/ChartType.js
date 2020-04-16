@@ -1,23 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js";
 
-const BarChart = (props) => {
+const ChartType = (props) => {
   const { chartConfig } = props;
   const [chart, setChart] = useState(null);
-  const cdx = useRef(null);
+  const ctx = useRef(null);
 
   useEffect(() => {
-    if (cdx && cdx.current) {
-      const newChart = new Chart(cdx.current, chartConfig);
+    // if (chart) {
+    //   chart.destroy();
+    // }
+    if (ctx && ctx.current) {
+      const newChart = new Chart(ctx.current, chartConfig);
       setChart(newChart);
     }
-  }, [cdx, chartConfig]);
+  }, [ctx]);
 
   return (
     <>
-      <canvas ref={cdx} />
+      <canvas ref={ctx} width="450" height="300" />
     </>
   );
 };
 
-export default BarChart;
+export default ChartType;

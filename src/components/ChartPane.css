@@ -1,2 +1,30 @@
 .ChartPane {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+
+  overflow-y: auto;
+}
+
+.ChartPane div:nth-child(odd) {
+  margin: 0 2rem 2rem 0;
+}
+
+.ChartPane__item {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+
+  padding: 1rem;
+  border-radius: 7px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChartPane canvas {
 }

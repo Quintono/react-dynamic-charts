@@ -1,24 +1,10 @@
-/* .App {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-} */
 .App {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
 }
 
 .header {
   grid-area: 1 / 1 / 2 / 7;
   text-align: center;
-  color: #35495e;
+  color: #28486e;
   letter-spacing: 1px;
 }
-/* .container-left {
-  grid-area: 2 / 1 / 6 / 4;
-}
-.container-right {
-  grid-area: 2 / 4 / 6 / 7;
-} */
